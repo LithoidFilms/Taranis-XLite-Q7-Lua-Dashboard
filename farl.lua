@@ -462,11 +462,11 @@ end
 local function getModeText()
   local modeText = "Unknown"
   if mode < -512 then
-    modeText = "Air Mode"
+    modeText = "Idle Dwn"
   elseif mode > -100 and mode < 100 then
-    modeText = "Acro"
+    modeText = "Idle Up"
   elseif mode > 512 then
-    modeText = "Horizon"
+    modeText = "Acro"
   end
   return modeText
 end
