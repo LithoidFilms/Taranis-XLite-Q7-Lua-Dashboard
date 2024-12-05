@@ -53,41 +53,41 @@ local function setAnimationIncrement()
   animationIncrement = math.fmod(math.ceil(math.fmod(getTime() / 100, 2) * 8), 4)
 end
 
-local function drawPropellor(start_x, start_y, invert)
-  local animationIncrementLocal = animationIncrement
-  if invert == true then
-    animationIncrementLocal = (animationIncrementLocal - 3) * -1
-    animationIncrementLocal = animationIncrementLocal + 3
-    if animationIncrementLocal > 3 then
-      animationIncrementLocal = animationIncrementLocal - 4
-    end
-  end
+--local function drawPropellor(start_x, start_y, invert)
+  --local animationIncrementLocal = animationIncrement
+  --if invert == true then
+    --animationIncrementLocal = (animationIncrementLocal - 3) * -1
+    --animationIncrementLocal = animationIncrementLocal + 3
+    --if animationIncrementLocal > 3 then
+      --animationIncrementLocal = animationIncrementLocal - 4
+    --end
+  --end
   
   -- Animated Quadcopter propellors
-  if ((isArmed == 0 or isArmed == 2) and invert == false) or (isArmed == 1 and animationIncrementLocal == 0) then
+  --if ((isArmed == 0 or isArmed == 2) and invert == false) or (isArmed == 1 and animationIncrementLocal == 0) then
     -- Top left Propellor
-    lcd.drawLine(start_x + 1, start_y + 9, start_x + 9, start_y + 1, SOLID, FORCE)
-    lcd.drawLine(start_x + 1, start_y + 10, start_x + 8, start_y + 1, SOLID, FORCE)
-  elseif isArmed == 1 and animationIncrementLocal == 1 then
+    --lcd.drawLine(start_x + 1, start_y + 9, start_x + 9, start_y + 1, SOLID, FORCE)
+    --lcd.drawLine(start_x + 1, start_y + 10, start_x + 8, start_y + 1, SOLID, FORCE)
+  --elseif isArmed == 1 and animationIncrementLocal == 1 then
     -- Top left Propellor
-    lcd.drawLine(start_x, start_y + 5, start_x + 9, start_y + 5, SOLID, FORCE)
-    lcd.drawLine(start_x, start_y + 4, start_x + 9, start_y + 6, SOLID, FORCE)
-  elseif ((isArmed == 0 or isArmed == 2) and invert == true) or (isArmed == 1 and animationIncrementLocal == 2) then
+    --lcd.drawLine(start_x, start_y + 5, start_x + 9, start_y + 5, SOLID, FORCE)
+    --lcd.drawLine(start_x, start_y + 4, start_x + 9, start_y + 6, SOLID, FORCE)
+  --elseif ((isArmed == 0 or isArmed == 2) and invert == true) or (isArmed == 1 and animationIncrementLocal == 2) then
     -- Top left Propellor
-    lcd.drawLine(start_x + 1, start_y + 1, start_x + 9, start_y + 9, SOLID, FORCE)
-    lcd.drawLine(start_x + 1, start_y + 2, start_x + 10, start_y + 9, SOLID, FORCE)
-  elseif isArmed == 1 and animationIncrementLocal == 3 then
+    --lcd.drawLine(start_x + 1, start_y + 1, start_x + 9, start_y + 9, SOLID, FORCE)
+    --lcd.drawLine(start_x + 1, start_y + 2, start_x + 10, start_y + 9, SOLID, FORCE)
+  --elseif isArmed == 1 and animationIncrementLocal == 3 then
     -- Top left Propellor
-    lcd.drawLine(start_x + 5, start_y, start_x + 5, start_y + 10, SOLID, FORCE)
-    lcd.drawLine(start_x + 6, start_y, start_x + 4, start_y + 10, SOLID, FORCE)
-  end
-end
+    --lcd.drawLine(start_x + 5, start_y, start_x + 5, start_y + 10, SOLID, FORCE)
+    --lcd.drawLine(start_x + 6, start_y, start_x + 4, start_y + 10, SOLID, FORCE)
+  --end
+--end
 
 -- A sexy helper to draw a 30x30 quadcopter (since X7 can not draw bitmap)
 local function drawQuadcopter(start_x,start_y)
 
   --Helibody
-  --lcd.drawline(start_x + 9, start_y + 14, start_x + 13, start_y + 14, SOLID, FORCE)
+  lcd.drawline(start_x + 9, start_y + 14, start_x + 13, start_y + 14, SOLID, FORCE)
   --lcd.drawline(start_x + 7, start_y + 15, start_x + 17, start_y + 15, SOLID, FORCE)
   --lcd.drawline(start_x + 6, start_y + 16, start_x + 27, start_y + 16, SOLID, FORCE)
   --lcd.drawline(start_x + 5, start_y + 17, start_x + 24, start_y + 17, SOLID, FORCE)
@@ -97,19 +97,19 @@ local function drawQuadcopter(start_x,start_y)
   --lcd.drawline(start_x + 7, start_y + 21, start_x + 14, start_y + 21, SOLID, FORCE)
   
   -- Top left to bottom right quad
-  lcd.drawLine(start_x + 4, start_y + 4, start_x + 26, start_y + 26, SOLID, FORCE)
-  lcd.drawLine(start_x + 4, start_y + 5, start_x + 25, start_y + 26, SOLID, FORCE)
+  --lcd.drawLine(start_x + 4, start_y + 4, start_x + 26, start_y + 26, SOLID, FORCE)
+  --lcd.drawLine(start_x + 4, start_y + 5, start_x + 25, start_y + 26, SOLID, FORCE)
   --lcd.drawLine(start_x + 5, start_y + 4, start_x + 26, start_y + 25, SOLID, FORCE)
   
   -- Bottom left to top right quad
-  lcd.drawLine(start_x + 4, start_y + 26, start_x + 26, start_y + 4, SOLID, FORCE)
-  lcd.drawLine(start_x + 4, start_y + 25, start_x + 25, start_y + 4, SOLID, FORCE)
-  lcd.drawLine(start_x + 5, start_y + 26, start_x + 26, start_y + 5, SOLID, FORCE)
+  --lcd.drawLine(start_x + 4, start_y + 26, start_x + 26, start_y + 4, SOLID, FORCE)
+  --lcd.drawLine(start_x + 4, start_y + 25, start_x + 25, start_y + 4, SOLID, FORCE)
+  --lcd.drawLine(start_x + 5, start_y + 26, start_x + 26, start_y + 5, SOLID, FORCE)
   
   -- Middle of Quad
-  lcd.drawRectangle(start_x + 11, start_y + 11, 9, 9, SOLID)
-  lcd.drawRectangle(start_x + 12, start_y + 12, 7, 7, SOLID)
-  lcd.drawRectangle(start_x + 13, start_y + 13, 5, 5, SOLID)
+  --lcd.drawRectangle(start_x + 11, start_y + 11, 9, 9, SOLID)
+  --lcd.drawRectangle(start_x + 12, start_y + 12, 7, 7, SOLID)
+  --lcd.drawRectangle(start_x + 13, start_y + 13, 5, 5, SOLID)
 
   -- ARMED text
   if isArmed == 1 then
@@ -117,13 +117,13 @@ local function drawQuadcopter(start_x,start_y)
   end
   
   -- Top-left propellor
-  drawPropellor(start_x, start_y, false)
+  --drawPropellor(start_x, start_y, false)
   -- Bottom-Right Propellor
-  drawPropellor(start_x + 20, start_y + 20, false)
+  --drawPropellor(start_x + 20, start_y + 20, false)
   -- Top-Right Propellor
-  drawPropellor(start_x + 20, start_y, true)
+  --drawPropellor(start_x + 20, start_y, true)
   -- Bottom-left Propellor
-  drawPropellor(start_x, start_y + 20, true)
+  --drawPropellor(start_x, start_y + 20, true)
   
 end
 
