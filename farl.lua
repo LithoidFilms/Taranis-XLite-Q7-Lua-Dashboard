@@ -107,9 +107,9 @@ local function drawQuadcopter(start_x,start_y)
   --lcd.drawLine(start_x + 5, start_y + 26, start_x + 26, start_y + 5, SOLID, FORCE)
   
   -- Middle of Quad
-  --lcd.drawRectangle(start_x + 11, start_y + 11, 9, 9, SOLID)
-  --lcd.drawRectangle(start_x + 12, start_y + 12, 7, 7, SOLID)
-  --lcd.drawRectangle(start_x + 13, start_y + 13, 5, 5, SOLID)
+  lcd.drawRectangle(start_x + 11, start_y + 11, 9, 9, SOLID)
+  lcd.drawRectangle(start_x + 12, start_y + 12, 7, 7, SOLID)
+  lcd.drawRectangle(start_x + 13, start_y + 13, 5, 5, SOLID)
 
   -- ARMED text
   if isArmed == 1 then
