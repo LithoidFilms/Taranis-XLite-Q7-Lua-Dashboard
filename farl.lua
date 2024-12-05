@@ -88,8 +88,8 @@ local function drawQuadcopter(start_x,start_y)
 
   --Helibody
   lcd.drawline(start_x + 9, start_y + 14, start_x + 13, start_y + 14, SOLID, FORCE)
-  --lcd.drawline(start_x + 7, start_y + 15, start_x + 17, start_y + 15, SOLID, FORCE)
-  --lcd.drawline(start_x + 6, start_y + 16, start_x + 27, start_y + 16, SOLID, FORCE)
+  lcd.drawline(start_x + 7, start_y + 15, start_x + 17, start_y + 15, SOLID, FORCE)
+  lcd.drawline(start_x + 6, start_y + 16, start_x + 27, start_y + 16, SOLID, FORCE)
   --lcd.drawline(start_x + 5, start_y + 17, start_x + 24, start_y + 17, SOLID, FORCE)
   --lcd.drawline(start_x + 4, start_y + 18, start_x + 17, start_y + 18, SOLID, FORCE)
   --lcd.drawline(start_x + 5, start_y + 19, start_x + 16, start_y + 19, SOLID, FORCE)
