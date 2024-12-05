@@ -94,7 +94,7 @@ local function drawQuadcopter(start_x,start_y)
   --lcd.drawline(start_x + 4, start_y + 18, start_x + 17, start_y + 18, SOLID, FORCE)
   --lcd.drawline(start_x + 5, start_y + 19, start_x + 16, start_y + 19, SOLID, FORCE)
   --lcd.drawline(start_x + 6, start_y + 20, start_x + 15, start_y + 20, SOLID, FORCE)
- -- lcd.drawline(start_x + 7, start_y + 21, start_x + 14, start_y + 21, SOLID, FORCE)
+  --lcd.drawline(start_x + 7, start_y + 21, start_x + 14, start_y + 21, SOLID, FORCE)
   
   -- Top left to bottom right quad
   lcd.drawLine(start_x + 4, start_y + 4, start_x + 26, start_y + 26, SOLID, FORCE)
